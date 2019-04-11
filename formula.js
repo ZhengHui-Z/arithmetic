@@ -66,14 +66,22 @@ function operate(a, b, op) {
     else return -1;
 }
 
-function alu(num) {
+function alu(num, boss) {
     var opr = ['+', '-', '&times;', '&divide;'];
     var star = '<i class="layui-icon" style="color: #1E9FFF;">&#xe67a;</i>';
     var obj = [];
     for (var i = 0; i < num;) {
         var op = [];
         var a = [];
-        for (var j = 0; j < 2; j++) op.push(randomInt(0, 3));
+        for (var j = 0; j < 2; j++){
+            var tmp = Math.random();
+            if (tmp > boss / num) {
+                op.push(randomInt(0, 1));
+            }
+            else {
+                op.push(randomInt(2, 3));
+            }
+        }
         for (var j = 0; j < 3; j++) a.push(randomInt(0, 100));
         var flag = randomInt(0, 1);
         if (flag)//abc*-
