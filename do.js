@@ -89,7 +89,7 @@ layui.use(['table', 'slider'], function () {
                 + '</fieldset>'
                 + '<div class="layui-row">'
                 + '<div class="layui-col-sm3">'
-                + '<div style="text-align: center"><i class="layui-icon" style="color: #1E9FFF;">&#xe67a;</i>  总共：100题</div>'
+                + '<div style="text-align: center"><i class="layui-icon" style="color: #1E9FFF;">&#xe67a;</i>  总共：' + Tnum + '题</div>'
                 + '</div >'
                 + '<div class="layui-col-sm3">'
                 + '<div style="text-align: center"><i class="layui-icon" style="color: #1E9FFF;">&#xe6af;</i>  做了：' + sum + '题</div>'
@@ -127,8 +127,8 @@ layui.use(['table', 'slider'], function () {
                     skin: 'layer-ext-moon'
                 })
             }
-            else if (sum != 100) {
-                var confirm = layer.confirm('你还有 ' + (100 - sum) + ' 题没完成', {
+            else if (sum != Tnum) {
+                var confirm = layer.confirm('你还有 ' + (Tnum - sum) + ' 题没完成', {
                     btn: ['确认提交？', '返回继续做'] //按钮
                 }, function () {
                     layer.close(confirm)
