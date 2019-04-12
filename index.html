@@ -23,6 +23,7 @@
     <div class="layui-container">
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
             <legend>四则运算</legend>
+            <div id="slideTest15" class="demo-slider"></div>
         </fieldset>
         <table class="layui-hide" id="test" lay-filter="do"></table>
 
@@ -84,7 +85,7 @@
                         , data: alu(100, 100)
                         , loading: true
                         , even: true
-                        , defaultToolbar: ['print', 'exports']
+                        , defaultToolbar: [""]
                         , toolbar: '#toolbarDemo'
                         , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
                             layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局

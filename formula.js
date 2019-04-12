@@ -82,7 +82,11 @@ function alu(num, boss) {
                 op.push(randomInt(2, 3));
             }
         }
-        for (var j = 0; j < 3; j++) a.push(randomInt(0, 100));
+        for (var j = 0; j < 3; j++) {
+            var tmp = Math.random();
+            if (tmp < 0.0005) a.push(0);
+            else a.push(randomInt(1, 100));
+        }
         var flag = randomInt(0, 1);
         if (flag)//abc*-
         {
