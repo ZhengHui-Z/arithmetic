@@ -188,7 +188,7 @@ layui.use(['table', 'slider'], function () {
                         , change: function (value) {
                             Tdiff = value
                             // console.log(value[0]) //得到开始值
-                            console.log(Tdiff) //得到结尾值
+                            //console.log(Tdiff) //得到结尾值
                         }
                         /* , setTips: function (value) { //自定义提示文本
                             if (value <= 10) return '简单题目' + '<i class="layui-icon">&#xe650;</i>';
