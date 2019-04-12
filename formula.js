@@ -98,7 +98,7 @@ function alu(num, boss) {
                     else var title = (a[0] + opr[op[1]] + '(' + a[1] + opr[op[0]] + a[2] + ')');
                     var diff = "";
                     for (var j = 0; j < op[0] / 2 + op[1] / 2 + 2; j++) diff += star;
-                    obj.push({ 'id': i, 'title': title, 'res': res, 'diff': diff });
+                    obj.push({ 'id': i+1, 'title': title, 'res': res, 'diff': diff });
                     i++;
                 }
 
@@ -114,7 +114,7 @@ function alu(num, boss) {
                     else var title = (a[0] + opr[op[0]] + a[1] + opr[op[1]] + a[2]);
                     var diff = "";
                     for (var j = 0; j < op[0] / 2 + op[1] / 2 + 2; j++) diff += star;
-                    obj.push({ 'id': i, 'title': title, 'res': res, 'diff': diff });
+                    obj.push({ 'id': i+1, 'title': title, 'res': res, 'diff': diff });
                     i++;
                 }
 
